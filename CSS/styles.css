@@ -35,6 +35,7 @@ the first exercise has been completed as an example
   
       /* Exercise 2: Create a more complex animation */
       /* Target the element with class 'scale-animate' and make it scale up and down */
+     
       #scale-animate {
         width: 50px;
         height: 50px;
@@ -81,7 +82,7 @@ the first exercise has been completed as an example
         width: 50px;
         height: 50px;
         background-color: brown;
-        animation: complexAnim 4s infinite;
+        animation: complexAnim 10s infinite;
       }
 
       @keyframes complexAnim{
@@ -129,39 +130,136 @@ the first exercise has been completed as an example
       }
 
       @keyframes cubeAnim {
-        from{
-          transform: rotateX(0deg);
-          transform: rotateY(0deg);
-          transform: rotateY(0deg);
+        0%{
+          transform: rotate3d(0,0,0,0deg);
         }
-        to{
-          transform: rotateX(180deg);
-          transform: rotateY(180deg);
-          transform: rotateY(180deg);
+        
+        100%{
+          transform: rotate3d(1,1,0 90deg)
         }
+        
       }
 
 
       /* Exercise 7: Create a pulsating element */
       /* Target the element with class 'pulse' and make it pulse in size */
      
+      #pulse{
+        width: 50px;
+        height: 50px;
+        background-color: cadetblue;
+        animation: pulseAnim 0.2s infinite;
+      }
+
+      @keyframes pulseAnim {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
   
       /* Exercise 8: Create a path animation */
       /* Target the element with class 'path-animate' and make it move along a curved path */
+      
+      #path-animate{
+        width: 50px;
+        height: 50px;
+        background-color: coral;
+        animation: pathAnim 3s infinite linear;
+      }
+
+
+
+      @keyframes pathAnim {
+        from{
+          transform: rotate(0deg)
+                     translate(150px)
+                     rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg)
+                     translate(150px)
+                     rotate(-360deg);
+        }
+      }
+      
+
       
   
       /* Exercise 9: Create a flickering neon effect */
       /* Target the element with class 'neon' and make it flicker like a neon sign */
      
-  
+
+      #neon{
+        width: 50px;
+        height: 50px;
+        background-color: aliceblue;
+        animation: flickerAnim 1.5s infinite;
+      }
+      
+      @keyframes flickerAnim {
+    
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+            
+            box-shadow:
+                0 0 .5rem #fff,
+                inset 0 0 .5rem #fff,
+                0 0 2rem #08f,
+                inset 0 0 2rem #08f,
+                0 0 4rem #08f,
+                inset 0 0 4rem #08f;        
+        }
+        
+        20%, 24%, 55% {        
+            box-shadow: none;
+        }    
+    }
       /* Exercise 10: Create a complex animation sequence */
       /* Target the element with ID 'sequence' and create a sequence of animations */
       
+      #sequence{
+        width: 50px;
+        height: 50px;
+        background-color: darkseagreen;
+        animation: flickerAnim 1.5s infinite, complexAnim 5s infinite, scalAnim 2s infinite ;
+      }
   
      /* Exercise 11 - Staggered animations */
      /* We will create three divs that animate differently based on their order. 
         use a child combinator to style each child element */
-      
+
+        #A{
+          width: 50px;
+          height: 50px;
+          background-color: #08f;
+          animation: spinAnim 2s infinite;
+          animation-delay: 0ms;
+        }
+
+        #B{
+          width: 50px;
+          height: 50px;
+          background-color: rgb(77, 77, 77);
+          animation: spinAnim 2s infinite;
+          animation-delay: 2s;
+          
+        }
+
+        #C{
+          width: 50px;
+          height: 50px;
+          background-color: aquamarine;
+          animation: spinAnim 2s infinite;
+          animation-delay: 4s;
+        }
+
+
+
   
      /*  - Use the nth-child(n) selector to apply different animation delays to each div */
   
@@ -173,3 +271,8 @@ the first exercise has been completed as an example
    /* Exercise 12: Stopping the animation */
    /* Add a button element to your html markup. Target this button with a class of .stop-button */
   
+   button{
+    width: 200px;
+    height: 100px;
+   }
+

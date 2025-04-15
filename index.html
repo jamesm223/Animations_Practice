@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <script src="scripts.js" defer></script>
 
 
 
@@ -31,26 +32,30 @@
     <div class="format" id="cube">6</div>
   
     <!-- Exercise 7: Pulsating animation -->
-    <div class="format pulse">7</div>
+    <div class="format" id="pulse">7</div>
   
     <!-- Exercise 8: Path animation -->
-    <div class="format path-animate">8</div>
+    <div class="format" id="path-animate">8</div>
   
     <!-- Exercise 9: Flickering neon effect -->
-    <div class="format neon">9</div>
+    <div class="format" id="neon">9</div>
   
     <!-- Exercise 10: Complex animation sequence -->
     <div class="format" id="sequence">10</div>
   
     <!-- Exercise 11: Staggered animation -->
     <div class="stagger">
-      <div class="format">A</div>
-      <div class="format">B</div>
-      <div class="format">C</div>
+      <div class="format" id="A">A</div>
+      <div class="format" id="B">B</div>
+      <div class="format" id="C">C</div>
     </div>
     
   <!-- Exercise 12: Stopping the animation -->
     
+    <button class="btn" id="ani-toggle" onclick="myFunction()">Toggle animation</button>
+
+  
+
   </body>
 
   </html>
