@@ -5,6 +5,8 @@ the first exercise has been completed as an example
 
 
 
+
+
 /* Basic styling for each element */
 .format {
     display:flex;
@@ -23,6 +25,7 @@ the first exercise has been completed as an example
         height: 100px;
         background-color: blue;
         animation: slide 2s infinite alternate;
+        animation-play-state: paused;
       }
   
       @keyframes slide {
@@ -272,7 +275,12 @@ the first exercise has been completed as an example
    /* Add a button element to your html markup. Target this button with a class of .stop-button */
   
    button{
-    width: 200px;
-    height: 100px;
+    width: 40px;
+    height: 20px;
+    margin-bottom: 20px;
    }
+
+
+
+   
 
